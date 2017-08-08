@@ -27,7 +27,7 @@ exports.execute = function(config){
 	var sheetFront = '<?xml version="1.0" encoding="utf-8"?><x:worksheet xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet" xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main" xmlns:x="http://schemas.openxmlformats.org/spreadsheetml/2006/main" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="x14ac" xmlns:x14ac="http://schemas.microsoft.com/office/spreadsheetml/2009/9/ac"><x:sheetPr><x:outlinePr summaryBelow="1" summaryRight="1" /><x:pageSetUpPr fitToPage="1"/></x:sheetPr><x:sheetViews><x:sheetView tabSelected="0" workbookViewId="0" /></x:sheetViews><x:sheetFormatPr defaultRowHeight="15" />';
 	var sheetBack = '<x:printOptions gridLines="1" /><x:pageMargins left="0.7" right="0.7" top="0.75" bottom="0.75" header="0.3" footer="0.3" /><x:pageSetup orientation="landscape" fitToHeight="0" />';
 	if (config.header)
-		sheetBack += '<x:headerFooter><x:oddHeader>' + config.header + '</x:oddHeader></x:headerFooter>';
+		sheetBack += '<x:headerFooter><x:oddHeader>' + config.header + '</x:oddHeader></x:headerFooter><x:tableParts count="0" /></x:worksheet>';
 	else
 		sheetBack += '<x:headerFooter /><x:tableParts count="0" /></x:worksheet>';
 

@@ -118,7 +118,7 @@ exports.execute = function(config){
 	}
 	var results = xlsx.generate({ base64: false, compression: "DEFLATE" });
 	delete xlsx;
-	delete shareStrings;
+	// delete shareStrings;
 	return results;
 };
 
